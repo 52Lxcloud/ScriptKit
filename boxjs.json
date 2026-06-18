@@ -85,6 +85,27 @@
 			]
 		},
 		{
+			"id": "NinebotCheckin",
+			"name": "九号出行 签到",
+			"keys": ["Ninebot.Accounts"],
+			"settings": [
+				{
+					"id": "Ninebot.Accounts",
+					"name": "账号列表",
+					"val": "",
+					"type": "textarea",
+					"placeholder": "deviceId:eyJhbGci...",
+					"desc": "格式: deviceId:Authorization，多个用 ; 分隔。打开 App 签到页可自动抓取"
+				}
+			],
+			"author": "@凉心",
+			"repo": "https://github.com/52Lxcloud/ScriptKit",
+			"icons": [
+				"https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Icons/ninebot.png",
+				"https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Icons/ninebot.png"
+			]
+		},
+		{
 			"id": "NodeseekCheckin",
 			"name": "NodeSeek 签到",
 			"keys": ["Nodeseek.User", "Nodeseek.Headers"],

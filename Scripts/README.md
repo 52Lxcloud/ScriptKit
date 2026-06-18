@@ -10,5 +10,6 @@
 | [akile.js](akile.js) | AkileCloud 签到 |
 | [v2ex.js](v2ex.js) | V2EX 签到 |
 | [nodeseek.js](nodeseek.js) | NodeSeek 签到 |
+| [ninebot.js](ninebot.js) | 九号出行 签到 |
 
 </div>

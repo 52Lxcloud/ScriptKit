@@ -1,0 +1,14 @@
+#!name=九号出行签到
+#!desc=自动签到领N币 · Token 抓取
+#!author=凉心
+#!category=凉心Tools
+#!date=2026-06-18 18:27:25
+#!arguments=CronExp:10 8 * * *
+#!arguments-desc=CronExp:签到时间 (Cron)\n\n打开 App 签到页自动抓取 Token
+
+[Script]
+Ninebot_Header=type=http-request,pattern=^https://cn-cbu-gateway\.ninebot\.com/(portal|app-api)/api/user-sign/,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js
+Ninebot_Checkin=type=cron,cronexp="{{{CronExp}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js
+
+[MITM]
+hostname = %APPEND% cn-cbu-gateway.ninebot.com
