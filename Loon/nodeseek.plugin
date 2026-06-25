@@ -1,0 +1,17 @@
+#!name=Nodeseek 签到
+#!desc=自动签到领鸡腿 · Headers 抓取
+#!author=凉心
+#!homepage=https://github.com/52Lxcloud/Scripts-dev
+#!date=2026-06-25 21:28:34
+
+[Argument]
+CronExp = input,"07 0 * * *",tag=CronExp,desc=签到时间 (Cron 表达式)
+USER_ID = input,"[0-9]+",tag=USER_ID,desc=用户UID · 点击头像进入个人主页链接/space后的数字为用户UID
+LogLevel = select,"info","off","error","warn","debug","all",tag=LogLevel,desc=日志级别 off/error/warn/info/debug/all (排查问题时填 debug)
+
+[Script]
+http-request ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek_Header, argument=[{USER_ID},{LogLevel}], requires-body=false, enable=true
+cron {CronExp} script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek_Checkin, argument=[{USER_ID},{LogLevel}], timeout=60, enable=true
+
+[MITM]
+hostname = www.nodeseek.com

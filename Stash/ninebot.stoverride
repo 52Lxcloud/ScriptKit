@@ -1,0 +1,28 @@
+name: '九号出行 签到'
+desc: '自动签到领N币 · Token 抓取'
+author: '凉心'
+category: '凉心Tools'
+homepage: 'https://github.com/52Lxcloud/Scripts-dev'
+date: '2026-06-25 21:28:34'
+version: '1.0.1'
+
+http:
+  mitm:
+    - cn-cbu-gateway.ninebot.com
+  script:
+    - match: ^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/
+      name: Ninebot
+      type: request
+      argument: 'LogLevel=info'
+
+cron:
+  script:
+    - name: Ninebot
+      cron: '10 8 * * *'
+      argument: 'LogLevel=info'
+      timeout: 60
+
+script-providers:
+  Ninebot:
+    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js
+    interval: 86400

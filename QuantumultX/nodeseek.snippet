@@ -1,0 +1,14 @@
+#!name=Nodeseek 签到
+#!desc=自动签到领鸡腿 · Headers 抓取
+#!author=凉心
+#!homepage=https://github.com/52Lxcloud/Scripts-dev
+#!date=2026-06-25 21:28:34
+
+[task_local]
+07 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek 签到, enabled=true
+
+[rewrite_local]
+^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js
+
+[mitm]
+hostname = %APPEND% www.nodeseek.com

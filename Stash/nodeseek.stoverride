@@ -1,0 +1,28 @@
+name: 'Nodeseek 签到'
+desc: '自动签到领鸡腿 · Headers 抓取'
+author: '凉心'
+category: '凉心Tools'
+homepage: 'https://github.com/52Lxcloud/Scripts-dev'
+date: '2026-06-25 21:28:34'
+version: '1.0.1'
+
+http:
+  mitm:
+    - www.nodeseek.com
+  script:
+    - match: ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$
+      name: Nodeseek
+      type: request
+      argument: 'USER_ID=[0-9]+&LogLevel=info'
+
+cron:
+  script:
+    - name: Nodeseek
+      cron: '07 0 * * *'
+      argument: 'USER_ID=[0-9]+&LogLevel=info'
+      timeout: 60
+
+script-providers:
+  Nodeseek:
+    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js
+    interval: 86400

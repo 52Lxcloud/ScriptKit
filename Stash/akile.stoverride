@@ -1,0 +1,19 @@
+name: 'AkileCloud 签到'
+desc: '每日签到 · 账号登录'
+author: '凉心'
+category: '凉心Tools'
+homepage: 'https://github.com/52Lxcloud/Scripts-dev'
+date: '2026-06-25 21:28:34'
+version: '1.0.1'
+
+cron:
+  script:
+    - name: Akile
+      cron: '30 7 * * *'
+      argument: 'Accounts=email:pass&LogLevel=info'
+      timeout: 60
+
+script-providers:
+  Akile:
+    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/akile.js
+    interval: 86400

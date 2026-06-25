@@ -21,6 +21,9 @@
 ScriptKit
 ├── Scripts/            # 跨平台 JS 脚本
 ├── Surge/              # Surge 模块
+├── Loon/               # Loon 插件
+├── QuantumultX/        # Quantumult X 重写
+├── Stash/              # Stash 覆写
 ├── Scripting/          # Scripting 模块
 └── boxjs.json
 ```

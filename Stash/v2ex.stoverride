@@ -1,0 +1,28 @@
+name: 'V2EX 签到'
+desc: '每日领取铜币 · Cookie 自动抓取'
+author: '凉心'
+category: '凉心Tools'
+homepage: 'https://github.com/52Lxcloud/Scripts-dev'
+date: '2026-06-25 21:28:34'
+version: '1.0.1'
+
+http:
+  mitm:
+    - www.v2ex.com
+  script:
+    - match: ^https?:\/\/www\.v2ex\.com\/member\/.*
+      name: V2EX
+      type: request
+      argument: 'User=.*&LogLevel=info'
+
+cron:
+  script:
+    - name: V2EX
+      cron: '10 0 * * *'
+      argument: 'User=.*&LogLevel=info'
+      timeout: 60
+
+script-providers:
+  V2EX:
+    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js
+    interval: 86400
