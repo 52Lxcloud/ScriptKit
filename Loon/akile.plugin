@@ -1,8 +1,8 @@
 #!name=AkileCloud 签到
 #!desc=每日签到 · 账号登录
 #!author=凉心
-#!homepage=https://github.com/52Lxcloud/Scripts-dev
-#!date=2026-06-25 21:28:34
+#!homepage=https://github.com/52Lxcloud/ScriptKit
+#!date=2026-06-26 11:43:55
 
 [Argument]
 CronExp = input,"30 7 * * *",tag=CronExp,desc=签到时间 (Cron 表达式)

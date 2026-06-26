@@ -1,8 +1,8 @@
 #!name=V2EX 签到
 #!desc=每日领取铜币 · Cookie 自动抓取
 #!author=凉心
-#!homepage=https://github.com/52Lxcloud/Scripts-dev
-#!date=2026-06-25 21:28:34
+#!homepage=https://github.com/52Lxcloud/ScriptKit
+#!date=2026-06-26 11:43:55
 
 [Argument]
 CronExp = input,"10 0 * * *",tag=CronExp,desc=签到时间 (Cron 表达式)

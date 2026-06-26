@@ -2,8 +2,8 @@ name: 'Flarum 签到'
 desc: '每日签到 · 账号登录 · 多站点'
 author: '凉心'
 category: '凉心Tools'
-homepage: 'https://github.com/52Lxcloud/Scripts-dev'
-date: '2026-06-25 21:28:34'
+homepage: 'https://github.com/52Lxcloud/ScriptKit'
+date: '2026-06-26 11:43:55'
 version: '1.0.3'
 
 cron:

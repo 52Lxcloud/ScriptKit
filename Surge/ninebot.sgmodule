@@ -2,7 +2,7 @@
 #!desc=自动签到领N币 · Token 抓取
 #!author=凉心
 #!category=凉心Tools
-#!date=2026-06-25 21:28:34
+#!date=2026-06-26 11:43:55
 #!arguments=CronExp:10 8 * * *,LogLevel:info
 #!arguments-desc=CronExp:签到时间 (Cron 表达式)\nLogLevel:日志级别 off/error/warn/info/debug/all (排查问题时填 debug)
 
