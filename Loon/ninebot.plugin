@@ -2,11 +2,13 @@
 #!desc=自动签到领N币 · Token 抓取
 #!author=凉心
 #!homepage=https://github.com/52Lxcloud/ScriptKit
-#!date=2026-06-26 11:43:55
+#!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Icons/ninebot.png
+#!tag=凉心Tools
+#!date=2026-06-26 14:58:14
 
 [Argument]
-CronExp = input,"10 8 * * *",tag=CronExp,desc=签到时间 (Cron 表达式)
-LogLevel = select,"info","off","error","warn","debug","all",tag=LogLevel,desc=日志级别 off/error/warn/info/debug/all (排查问题时填 debug)
+CronExp = input,"10 8 * * *",tag=签到时间,desc=签到时间 (Cron 表达式)
+LogLevel = select,"info","off","error","warn","debug","all",tag=日志级别,desc=off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
 http-request ^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/ script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js, tag=Ninebot_Header, argument=[{LogLevel}], requires-body=false, enable=true

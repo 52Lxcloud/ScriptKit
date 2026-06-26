@@ -1,14 +1,15 @@
-#!name=Nodeseek 签到
-#!desc=自动签到领鸡腿 · Headers 抓取
-#!author=凉心
-#!homepage=https://github.com/52Lxcloud/ScriptKit
-#!date=2026-06-26 11:43:55
+#!name = Nodeseek 签到
+#!desc = 自动签到领鸡腿 · Headers 抓取
+#!author = 凉心
+#!homepage = https://github.com/52Lxcloud/ScriptKit
+#!category = 凉心Tools
+#!date = 2026-06-26 14:58:14
 
-[task_local]
-07 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek 签到, enabled=true
+# 点击计划任务,文本方式添加这行
+# 07 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek 签到
 
-[rewrite_local]
+#[rewrite_local]
 ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js
 
-[mitm]
+#[mitm]
 hostname = %APPEND% www.nodeseek.com

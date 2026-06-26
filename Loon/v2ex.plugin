@@ -2,12 +2,14 @@
 #!desc=每日领取铜币 · Cookie 自动抓取
 #!author=凉心
 #!homepage=https://github.com/52Lxcloud/ScriptKit
-#!date=2026-06-26 11:43:55
+#!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Icons/v2ex.png
+#!tag=凉心Tools
+#!date=2026-06-26 14:58:14
 
 [Argument]
-CronExp = input,"10 0 * * *",tag=CronExp,desc=签到时间 (Cron 表达式)
-User = input,".*",tag=User,desc=用户名 · 填写用户名后仅个人主页触发Cookie抓取
-LogLevel = select,"info","off","error","warn","debug","all",tag=LogLevel,desc=日志级别 off/error/warn/info/debug/all (排查问题时填 debug)
+CronExp = input,"10 0 * * *",tag=签到时间,desc=签到时间 (Cron 表达式)
+User = input,".*",tag=用户名,desc=用户名 · 填写用户名后仅个人主页触发Cookie抓取
+LogLevel = select,"info","off","error","warn","debug","all",tag=日志级别,desc=off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
 http-request ^https?:\/\/www\.v2ex\.com\/member\/.* script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js, tag=V2EX_Cookie, argument=[{User},{LogLevel}], requires-body=false, enable=true

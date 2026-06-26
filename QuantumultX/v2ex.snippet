@@ -1,14 +1,15 @@
-#!name=V2EX 签到
-#!desc=每日领取铜币 · Cookie 自动抓取
-#!author=凉心
-#!homepage=https://github.com/52Lxcloud/ScriptKit
-#!date=2026-06-26 11:43:55
+#!name = V2EX 签到
+#!desc = 每日领取铜币 · Cookie 自动抓取
+#!author = 凉心
+#!homepage = https://github.com/52Lxcloud/ScriptKit
+#!category = 凉心Tools
+#!date = 2026-06-26 14:58:14
 
-[task_local]
-10 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js, tag=V2EX 签到, enabled=true
+# 点击计划任务,文本方式添加这行
+# 10 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js, tag=V2EX 签到
 
-[rewrite_local]
+#[rewrite_local]
 ^https?:\/\/www\.v2ex\.com\/member\/.* url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js
 
-[mitm]
+#[mitm]
 hostname = %APPEND% www.v2ex.com

@@ -2,9 +2,9 @@
 #!desc=每日领取铜币 · Cookie 自动抓取
 #!author=凉心
 #!category=凉心Tools
-#!date=2026-06-26 11:43:55
+#!date=2026-06-26 14:58:14
 #!arguments=CronExp:10 0 * * *,User:.*,LogLevel:info
-#!arguments-desc=CronExp:签到时间 (Cron 表达式)\nUser:用户名\n填写用户名后仅个人主页触发Cookie抓取\nLogLevel:日志级别 off/error/warn/info/debug/all (排查问题时填 debug)
+#!arguments-desc=CronExp:签到时间 (Cron 表达式)\nUser:用户名\n填写用户名后仅个人主页触发Cookie抓取\nLogLevel:off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
 V2EX_Cookie=type=http-request,pattern=^https?:\/\/www\.v2ex\.com\/member\/{{{User}}},requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js,argument="User={{{User}}}&LogLevel={{{LogLevel}}}"

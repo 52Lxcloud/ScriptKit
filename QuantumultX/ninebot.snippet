@@ -1,14 +1,15 @@
-#!name=九号出行 签到
-#!desc=自动签到领N币 · Token 抓取
-#!author=凉心
-#!homepage=https://github.com/52Lxcloud/ScriptKit
-#!date=2026-06-26 11:43:55
+#!name = 九号出行 签到
+#!desc = 自动签到领N币 · Token 抓取
+#!author = 凉心
+#!homepage = https://github.com/52Lxcloud/ScriptKit
+#!category = 凉心Tools
+#!date = 2026-06-26 14:58:14
 
-[task_local]
-10 8 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js, tag=九号出行 签到, enabled=true
+# 点击计划任务,文本方式添加这行
+# 10 8 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js, tag=九号出行 签到
 
-[rewrite_local]
+#[rewrite_local]
 ^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js
 
-[mitm]
+#[mitm]
 hostname = %APPEND% cn-cbu-gateway.ninebot.com
