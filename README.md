@@ -33,7 +33,7 @@ ScriptKit
 配置优先级：模块参数 > BoxJS 存储。
 
 ```
-https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/boxjs.json
+https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/boxjs.json
 ```
 
 ### 免责声明

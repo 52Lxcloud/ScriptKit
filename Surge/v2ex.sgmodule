@@ -7,8 +7,8 @@
 #!arguments-desc=CronExp:签到时间 (Cron 表达式)\nUser:用户名\n填写用户名后仅个人主页触发Cookie抓取\nLogLevel:off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
-V2EX_Cookie=type=http-request,pattern=^https?:\/\/www\.v2ex\.com\/member\/{{{User}}},requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js,argument="User={{{User}}}&LogLevel={{{LogLevel}}}"
-V2EX_Checkin=type=cron,cronexp="{{{CronExp}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js,argument="User={{{User}}}&LogLevel={{{LogLevel}}}"
+V2EX_Cookie=type=http-request,pattern=^https?:\/\/www\.v2ex\.com\/member\/{{{User}}},requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/v2ex.js,argument="User={{{User}}}&LogLevel={{{LogLevel}}}"
+V2EX_Checkin=type=cron,cronexp="{{{CronExp}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/v2ex.js,argument="User={{{User}}}&LogLevel={{{LogLevel}}}"
 
 [MITM]
 hostname = %APPEND% www.v2ex.com

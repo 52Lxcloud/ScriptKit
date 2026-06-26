@@ -2,7 +2,7 @@
 #!desc=每日领取铜币 · Cookie 自动抓取
 #!author=凉心
 #!homepage=https://github.com/52Lxcloud/ScriptKit
-#!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Icons/v2ex.png
+#!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Icons/v2ex.png
 #!tag=凉心Tools
 #!date=2026-06-26 14:58:14
 
@@ -12,8 +12,8 @@ User = input,".*",tag=用户名,desc=用户名 · 填写用户名后仅个人主
 LogLevel = select,"info","off","error","warn","debug","all",tag=日志级别,desc=off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
-http-request ^https?:\/\/www\.v2ex\.com\/member\/.* script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js, tag=V2EX_Cookie, argument=[{User},{LogLevel}], requires-body=false, enable=true
-cron {CronExp} script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js, tag=V2EX_Checkin, argument=[{User},{LogLevel}], timeout=60, enable=true
+http-request ^https?:\/\/www\.v2ex\.com\/member\/.* script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/v2ex.js, tag=V2EX_Cookie, argument=[{User},{LogLevel}], requires-body=false, enable=true
+cron {CronExp} script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/v2ex.js, tag=V2EX_Checkin, argument=[{User},{LogLevel}], timeout=60, enable=true
 
 [MITM]
 hostname = www.v2ex.com

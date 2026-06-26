@@ -15,5 +15,5 @@ cron:
 
 script-providers:
   Flarum:
-    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/flarum.js
+    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/flarum.js
     interval: 86400

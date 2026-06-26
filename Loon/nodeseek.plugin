@@ -2,7 +2,7 @@
 #!desc=自动签到领鸡腿 · Headers 抓取
 #!author=凉心
 #!homepage=https://github.com/52Lxcloud/ScriptKit
-#!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Icons/nodeseek.png
+#!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Icons/nodeseek.png
 #!tag=凉心Tools
 #!date=2026-06-26 14:58:14
 
@@ -12,8 +12,8 @@ USER_ID = input,"[0-9]+",tag=用户UID,desc=用户UID · 点击头像进入个�
 LogLevel = select,"info","off","error","warn","debug","all",tag=日志级别,desc=off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
-http-request ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek_Header, argument=[{USER_ID},{LogLevel}], requires-body=false, enable=true
-cron {CronExp} script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek_Checkin, argument=[{USER_ID},{LogLevel}], timeout=60, enable=true
+http-request ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/nodeseek.js, tag=Nodeseek_Header, argument=[{USER_ID},{LogLevel}], requires-body=false, enable=true
+cron {CronExp} script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/nodeseek.js, tag=Nodeseek_Checkin, argument=[{USER_ID},{LogLevel}], timeout=60, enable=true
 
 [MITM]
 hostname = www.nodeseek.com

@@ -6,10 +6,10 @@
 #!date = 2026-06-26 14:58:14
 
 # 点击计划任务,文本方式添加这行
-# 10 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js, tag=V2EX 签到
+# 10 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/v2ex.js, tag=V2EX 签到
 
 #[rewrite_local]
-^https?:\/\/www\.v2ex\.com\/member\/.* url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/v2ex.js
+^https?:\/\/www\.v2ex\.com\/member\/.* url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/v2ex.js
 
 #[mitm]
 hostname = %APPEND% www.v2ex.com

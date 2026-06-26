@@ -6,10 +6,10 @@
 #!date = 2026-06-26 14:58:14
 
 # 点击计划任务,文本方式添加这行
-# 10 8 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js, tag=九号出行 签到
+# 10 8 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/ninebot.js, tag=九号出行 签到
 
 #[rewrite_local]
-^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js
+^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/ninebot.js
 
 #[mitm]
 hostname = %APPEND% cn-cbu-gateway.ninebot.com

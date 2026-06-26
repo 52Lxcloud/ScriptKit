@@ -7,8 +7,8 @@
 #!arguments-desc=CronExp:签到时间 (Cron 表达式)\nLogLevel:off/error/warn/info/debug/all (排查问题时填 debug)
 
 [Script]
-Ninebot_Header=type=http-request,pattern=^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js,argument="LogLevel={{{LogLevel}}}"
-Ninebot_Checkin=type=cron,cronexp="{{{CronExp}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/ninebot.js,argument="LogLevel={{{LogLevel}}}"
+Ninebot_Header=type=http-request,pattern=^https:\/\/cn-cbu-gateway\.ninebot\.com\/(portal|app-api)\/api\/user-sign\/,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/ninebot.js,argument="LogLevel={{{LogLevel}}}"
+Ninebot_Checkin=type=cron,cronexp="{{{CronExp}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/ninebot.js,argument="LogLevel={{{LogLevel}}}"
 
 [MITM]
 hostname = %APPEND% cn-cbu-gateway.ninebot.com

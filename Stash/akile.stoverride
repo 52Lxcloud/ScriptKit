@@ -15,5 +15,5 @@ cron:
 
 script-providers:
   Akile:
-    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/akile.js
+    url: https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/akile.js
     interval: 86400

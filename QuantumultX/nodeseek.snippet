@@ -6,10 +6,10 @@
 #!date = 2026-06-26 14:58:14
 
 # 点击计划任务,文本方式添加这行
-# 07 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js, tag=Nodeseek 签到
+# 07 0 * * * https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/nodeseek.js, tag=Nodeseek 签到
 
 #[rewrite_local]
-^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/main/Scripts/nodeseek.js
+^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/[0-9]+\?readme=1$ url script-request-header https://raw.githubusercontent.com/52Lxcloud/ScriptKit/dev/Scripts/nodeseek.js
 
 #[mitm]
 hostname = %APPEND% www.nodeseek.com
